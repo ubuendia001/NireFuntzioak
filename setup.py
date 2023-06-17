@@ -21,6 +21,7 @@ setup(
         'pywin32',
         'smtplib',
         'email',
+        'setuptools'
     ],
 )
 
