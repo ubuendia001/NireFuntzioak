@@ -5,7 +5,7 @@ import json
 
 def eurostat_jaitsi(codigo_tabla,**parametros):
     """
-    Esta función descarga la información de la tabla seleccionada de EUROSTAT
+    Esta función descarga la información de la tabla seleccionada de EUROSTAT.
     Importaciones necesarias:
         -import pandas as pd
         -import requests
