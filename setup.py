@@ -20,8 +20,7 @@ setup(
         'requests',
         'pywin32',
         'smtplib',
-        'email',
-        'setuptools'
+        'email'
     ],
 )
 
