@@ -102,6 +102,18 @@ def nombre_comarca(codigo):
     except:
         return '0'
 
+def nombre_agrupacion_modelo(codigo):
+    """
+    Esta función devuelve un string con el nombre de la región (tal y como se define en el modelo EVE2000) del municipio utilizando el código del municipio.
+    Parametros:
+        -codigo(string): string con el código oficial del municipio
+    """
+    try:
+        codigoComarca=tabla_comarcas_municipios.loc[str(codigo),'ComarcaCodigo']
+        return tabla_comarcas.loc[codigoComarca, 'AgrMODELO']
+    except:
+        return '0'
+
 def nombre_TTHH(codigo):
     """
     Esta función devuelve un string con el nombre del TTHH utilizando el código del municipio.
