@@ -14,8 +14,10 @@ conn=sqlite3.connect(directorio)
 hiztegiaDF=pd.read_sql('SELECT * FROM HIZTEGIA',con=conn)
 conn.close()
 
-#Convertimos a euskera la palabra introducida en castellano
-def traducir(palabra):
+def traducirEuskera(palabra):
+    '''
+    Traduce al euskera cualquier palabra en castellano
+    '''
     try:
         if pd.isna(palabra):
             return pd.NA
@@ -26,4 +28,21 @@ def traducir(palabra):
         print(e)
         # print(f'Ha habido algún problema con la palabra {palabra}')
         return palabra
+
+
+def traducirIngles(palabra):
+    '''
+    Traduce al inglés cualquier palabra en castellano
+    '''
+    try:
+        if pd.isna(palabra):
+            return pd.NA
+        #Para que no afecte si hay letras en mayúsculas, ponemos siempre el capitalize 
+        traduccion=hiztegiaDF.loc[hiztegiaDF['Palabra']==palabra.capitalize(),'Word'].values[0]
+        return traduccion
+    except Exception as e:
+        print(e)
+        # print(f'Ha habido algún problema con la palabra {palabra}')
+        return palabra
+
 
