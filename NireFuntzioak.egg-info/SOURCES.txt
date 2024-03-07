@@ -1,0 +1,5 @@
+setup.py
+NireFuntzioak.egg-info/PKG-INFO
+NireFuntzioak.egg-info/SOURCES.txt
+NireFuntzioak.egg-info/dependency_links.txt
+NireFuntzioak.egg-info/top_level.txt
