@@ -5,6 +5,7 @@ from docx import Document
 from docx.shared import Mm
 from docxtpl import DocxTemplate
 import os
+import matplotlib.pyplot as plt
 
 def mandar_a_impresora(archivo_nombre):
     """
